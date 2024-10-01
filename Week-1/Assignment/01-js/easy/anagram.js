@@ -3,9 +3,12 @@
   What's Anagram?
   - A word, phrase, or name formed by rearranging the letters of another, such as spar, formed from rasp.
 */
+let sortString = (s) => {
+  return s.toLowerCase().split("").sort().join("");
+};
 
 function isAnagram(str1, str2) {
-
+  return sortString(str1) === sortString(str2);
 }
 
 module.exports = isAnagram;
